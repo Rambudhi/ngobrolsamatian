@@ -1,4 +1,5 @@
 
+import BackToTop from "@/components/layout/back-to-top";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { PageIntro } from "@/components/providers/page-intro";
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#F9F1E8] text-[#3D3028] antialiased">
         <SmoothScroll>
           <PageIntro />
+          <BackToTop />
           <Navbar />
           {children}
           <Footer />

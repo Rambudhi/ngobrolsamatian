@@ -158,7 +158,7 @@ function TestimonialTrack({
     duration: number;
     reduceMotion: boolean | null;
 }) {
-    const duplicatedItems = [...items, ...items];
+    const duplicatedItems = [...items, ...items, ...items, ...items];
 
     return (
         <div className="relative overflow-hidden py-2">
@@ -168,10 +168,7 @@ function TestimonialTrack({
                     reduceMotion
                         ? undefined
                         : {
-                            x:
-                                direction === "right"
-                                    ? ["-50%", "0%"]
-                                    : ["0%", "-50%"],
+                            x: direction === "right" ? ["-50%", "0%"] : ["0%", "-50%"],
                         }
                 }
                 transition={
@@ -182,6 +179,7 @@ function TestimonialTrack({
                                 duration,
                                 ease: "linear",
                                 repeat: Infinity,
+                                repeatType: "loop",
                             },
                         }
                 }
@@ -274,12 +272,13 @@ export function Testimonials() {
                 {/* Blur/fade sisi kiri */}
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute -inset-y-8 left-0 z-10 w-20 bg-gradient-to-r from-[#F9F1E8] via-[#F9F1E8]/85 to-transparent backdrop-blur-sm sm:w-40 md:w-56 lg:w-64"
+                    className="pointer-events-none absolute -inset-y-8 left-0 z-10 w-48 bg-gradient-to-r from-[#F9F1E8] via-[#F9F1E8]/70 to-transparent backdrop-blur-[1px] sm:w-64 md:w-80 lg:w-[28rem] xl:w-[32rem]"
                 />
+
                 {/* Blur/fade sisi kanan */}
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#F9F1E8] via-[#F9F1E8]/85 to-transparent backdrop-blur-sm sm:w-40 md:w-56 lg:w-64"
+                    className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48 bg-gradient-to-l from-[#F9F1E8] via-[#F9F1E8]/70 to-transparent backdrop-blur-[1px] sm:w-64 md:w-80 lg:w-[28rem] xl:w-[32rem]"
                 />
             </div>
         </section>
