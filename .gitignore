@@ -1,5 +1,24 @@
-# Object file
-*.o
 
-# Ada Library Information
-*.ali
+# Dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Environment variables
+.env*
+!.env.example
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Misc
+.DS_Store
